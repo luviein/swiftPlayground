@@ -9,14 +9,9 @@ import Cocoa
 //}
 //deliverTalk(name: "My Awesome Talk", type: awesomeTalk)
 
-func repeatAction(count: Int, action: () -> Void) {
-    for _ in 0..<count {
-        action()
-    }
+struct Doctor {
+    var name: String
+    var location: String
+    private var currentPatient = "No one"
 }
-repeatAction(count: 5) {
-    print("Hello, world!")
-}
-repeatAction(count: 3) {
-    print("Repeating")
-}
+let drJones = Doctor(name: "Esther Jones", location: "Bristol")
